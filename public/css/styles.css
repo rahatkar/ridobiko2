@@ -1,0 +1,172 @@
+
+
+  body{
+      margin: 0;
+      min-width: 100vh;
+      background-color:green;
+      /* text-align: center; */
+  }
+  h2{
+      margin-left: 30px;
+      
+  }
+  button a{
+      color: white;
+      text-decoration: none;
+  }
+  button a i{
+      margin-right: 8%;
+  }
+    input{
+        padding: 10px ;
+        margin:  5px 10px 15px 30px; 
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 5px;
+        width: 60%;
+        
+    }
+    input:hover{
+        border-color: skyblue;
+    }
+   
+    .login{
+        height: 25rem;
+        background-color: white;
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       width: 45%;
+        
+       
+
+    }
+    .left{
+         height: 100%; 
+       
+        width: 50%;
+        display: inline-block;
+    }
+    
+    .right{
+        height: 100%;
+         text-align: center;
+        
+        position: relative;
+        left: 50%;
+        bottom: 100%;
+        width: 50%;
+       
+        /* display: inline-block; */
+
+    }
+  
+    .sign-up{
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: green;
+        margin-left: 30px;
+        padding: 10px;
+
+    }
+
+    button:hover{
+        
+    }
+    .social-media{
+          
+        width: 80%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+      
+    }
+    .facebook{
+        margin-top: 7rem;
+        background-color: #3b5998;
+       
+       
+    }
+    .linkdin{
+        margin-top: 14px;
+        background-color:#0e76a8;
+    }
+    .google{
+        margin-top: 14px;
+        background-color:#DB4437;
+    }
+    .vl{
+        border-left: 1px solid black;
+        height: 45%;
+        position: absolute;
+        left:50%;
+        bottom: 28.5%;
+
+        
+    }
+
+    @media(max-width:1149px ){
+        .vl{
+            display: none;
+        }
+        .login{
+            text-align: center;
+            height: 30rem;
+            /* width: 50%; */
+        }
+        .left{
+            width: 105%;
+            text-align: center;
+        }
+        input,.sign-up{
+            margin-left: 10px;
+           
+        }
+        
+        .right{
+          
+           display:-webkit-inline-flex;
+           
+            width: 100%;
+            position: relative; 
+            left: 0%;
+            bottom: 20%; 
+         
+           
+            /* display: inline-block; */
+    
+        }
+        .social-media{
+            text-align: center;
+        }
+        .facebook{
+            margin-left: 10px;
+            margin-top: 30px;
+        width: 80%;
+            
+           
+        }
+        .linkdin{
+            margin-left: 10px;
+            margin-top: 30px;
+            width: 80%;
+        }
+        .google{
+            margin-left: 10px;
+            margin-top: 30px;
+            width: 80%;
+        }
+        
+    }
+    @media(max-width:791px){
+        button.social-media{
+            
+        }
+    }
