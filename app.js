@@ -34,7 +34,7 @@ app.use(passport.session());
 
 
 
-mongoose.connect("mongodb+srv://admin-pradhumna17:7777777p@cluster0.zlxyi.mongodb.net/ribodikoDB",{ useNewUrlParser:true});
+mongoose.connect("mongodb+srv://admin-pradhumna17:7777777p@cluster0.zlxyi.mongodb.net/ribodikoDB",{ useNewUrlParser:true, useUnifiedTopology: true });
 
 const personSchema=new mongoose.Schema({
     
