@@ -74,7 +74,7 @@ passport.use(new GoogleStrategy({
     userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo" //if google+ api deprecates
   },
   function(accessToken, refreshToken, profile, cb) {
-      console.log(profile);
+  
       
     Person.findOrCreate(
         { username: profile.id },
@@ -98,7 +98,7 @@ passport.use(new FacebookStrategy({
     profileFields:["id","email"]
   },
   function(accessToken, refreshToken, profile, cb) {
-      console.log(profile);
+      
     Person.findOrCreate(    
         { username: profile.id },
         {
@@ -132,7 +132,7 @@ passport.use(new LinkedInStrategy({
 //     });
 //   }
 function(accessToken, refreshToken, profile, cb) {
-    console.log(profile);
+    
   Person.findOrCreate(    
       { username: profile.id },
       {
@@ -142,7 +142,6 @@ function(accessToken, refreshToken, profile, cb) {
   function (err, person) {
     return cb(err, person);
   });
-  console.log("till find or create of facebook no problem");
 }
   ));
 
@@ -171,7 +170,7 @@ app.get('/auth/google',
     // Successful authentication, redirect home.
     res.redirect('/success');
 
-    console.log("till authgoogleridobiko no problem");
+    
   });
   
 
@@ -184,7 +183,7 @@ app.get('/auth/google',
   passport.authenticate('facebook', { failureRedirect: '/failure' }),
   function(req, res) {
     res.redirect('/success');
-    console.log("till authfacebookridobiko no problem");
+    
   });
  
   //for linkedin
@@ -217,7 +216,7 @@ app.post("/",function (req,res) {  //passport-local-mongoose to register our use
      
      if(err){
       res.redirect("/success");
-   console.log(err);
+
        
      }else{
       passport.authenticate("local")(function (req,res) {            //to authentic the users
